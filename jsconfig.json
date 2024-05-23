@@ -5,6 +5,7 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
+      //HomeView 참고하셔. @의 절대 경로를 설정
       "@/*": [
         "src/*"
       ]
