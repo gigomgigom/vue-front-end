@@ -38,7 +38,7 @@ const routes = [
     redirect: '/Ch02ComponentRouting/Exam05View/UIComponentA',
     children: [
       {
-        path: "UIComponentA", //부모 컴포넌트 요청 경로의 하위 요소를 명시해준다.
+        path: "UIComponentA", //상위 컴포넌트 요청 경로의 하위 요소를 명시해준다.
         component: UIComponentA
       },
       {
