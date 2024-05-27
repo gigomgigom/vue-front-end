@@ -38,6 +38,10 @@ const routes = [
     {
         path: "/Ch03DataBinding/Exam10FallThroughAttr",
         component: () =>  import(/* webpackChunkName: "Ch03DataBinding" */ '@/views/Ch03DataBinding/Exam10FallThroughAttr')
+    },
+    {
+        path: "/Ch03DataBinding/Exam11Slot",
+        component: () =>  import(/* webpackChunkName: "Ch03DataBinding" */ '@/views/Ch03DataBinding/Exam11Slot')
     }
 ];
 

@@ -4,6 +4,7 @@
         <div class="card-body">
             <UIComponentA id="uiComponentA" myclass="bg-info" mystyle="color:orange" @click="handleClick"/>
             <UIComponentB id="uiComponentB" myclass="bg-info" mystyle="color:orange" @click="handleClick"/>
+            <UIComponentB id="uiComponentB" myclass="bg-secondary" mystyle="color:red" @click="handleClick"/>
         </div>
     </div>
 </template>

@@ -145,6 +145,12 @@
                                     Exam10FallThroughAttr: FallThrough속성(컴포넌트의 템플릿 루트로 그대로 전달됨.)
                         </RouterLink>
                     </li>
+                    <li class="nav-item">
+                        <RouterLink to="/Ch03DataBinding/Exam11Slot" 
+                                    class="nav-link">
+                                    Exam11Slot: Slot (UI 구조 동일 다만, 내용이 다를 경우)
+                        </RouterLink>
+                    </li>
                 </ul>
             </div>
             </div>

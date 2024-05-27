@@ -121,6 +121,7 @@ let product = ref({
 function handleSubmit() {
     //유효성 검사....
     console.log("양식제출버튼이 클릭되었당.");
+    console.log(product.value);
     console.log(JSON.parse(JSON.stringify(product.value)));
     //서버 통신 코드 추가...
 }

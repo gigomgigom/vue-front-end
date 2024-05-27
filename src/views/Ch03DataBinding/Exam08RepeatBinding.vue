@@ -4,7 +4,7 @@
         <div class="card-body">
             <div>
                 <h6>[범위 반복]</h6>
-                <span v-for="n in 16" :key="n" class="mr-2">
+                <span v-for="n in 4" :key="n" class="mr-2">
                     <img :src="`/images/photos/photo${n}.jpg`" width="150" height="150" />
                 </span>
             </div>

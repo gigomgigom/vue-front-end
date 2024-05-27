@@ -25,8 +25,8 @@
             <div class="mb-4">
                 <h5>:style="변수 | 객체 | 배열"</h5>
                 <div style="margin-bottom: 10px; font-weight: bold;">스타일 속성 직접기입</div>
-                <div style="margin-bottom: 10px;" :style="[style1, style2]">변수를 담은 배열로 속성 기입</div>
-                <div style="margin-bottom: 10px;" :style="{'font-weight':fontWeight, 'color':textColor}">속성들을 담은 객체로 기입</div>
+                <div :style="[style1, style2]">변수를 담은 배열로 속성 기입</div>
+                <div :style="{'font-weight':fontWeight, 'color':textColor}">속성들을 담은 객체로 기입</div>
             </div>
 
             <hr/>
@@ -61,12 +61,12 @@
     function changeData() {
         if(toggle.value) {
             imgName.value = "photo2.jpg";
-            className1.value = "text-warning";
+            className3.value = "text-warning";
             fontWeight.value = "";
             textColor.value= "#0000ff";
         } else {
             imgName.value = "photo1.jpg";
-            className1.value = "text-danger";
+            className3.value = "text-danger";
             fontWeight.value = "bold";
             textColor.value= "#ff0000";
         }
