@@ -7,7 +7,7 @@
             <p>아이씨 왜저래!</p>
         </template>
         <template v-slot:footer>
-            <button class="btn btn-info btn-warning btn-sm" @click="confirm">확인</button>
+            <button class="btn btn-info btn-warning btn-sm" @click="emits('close')">확인</button>
         </template>
     </DialogTemplate>
 </template>
@@ -15,6 +15,7 @@
 <script setup>
 import DialogTemplate from "./DialogTemplate.vue";
 
+const emits = defineEmits(["close"]);
 
 </script>
 

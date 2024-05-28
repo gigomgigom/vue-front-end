@@ -14,7 +14,7 @@
             </div>
         </template>
         <template v-slot:footer>
-            <button class="btn btn-info btn-warning btn-sm">로그인</button>
+            <button class="btn btn-info btn-warning btn-sm" @click="submit">로그인</button>
             <button class="btn btn-info btn-warning btn-sm" data-bs-dismiss="modal">닫기</button>
         </template>
     </DialogTemplate>
@@ -24,11 +24,19 @@
     import { ref } from "vue";
     import DialogTemplate from "./DialogTemplate.vue";
 
+    const emits = defineEmits(["close"]);
+
     const inputData = ref({
         email: "",
         password: ""
     });
 
+    function submit() {
+        //상태데이터 객체타입(Proxy Object)에서 JSON타입으로 변환시킨다.
+        console.log(JSON.parse(JSON.stringify(inputData.value)));
+        //FallThrough해서 받은 이벤트 함수를 호출한다.
+        emits('close');
+    }
 </script>
 
 <style scoped></style>

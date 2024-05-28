@@ -1,12 +1,8 @@
 <template>
-    <div class="card" :id="$attrs.id">
+    <div class="card" :id="attrs.id">
         <div class="card-header">UIComponentB</div>
         <div class="card-body">
-            <div class="mb-2" :class="$attrs.myclass" :style="$attrs.mystyle" @click="$attrs.onClick">
-                Content
-            </div>
-            <div :class="$attrs.myclass" :style="$attrs.mystyle" @click="$emit('click')">
-                <!--$emit: 상위 컴포넌트에서 넘겨받은 속성을 이름을 통해 사용할 수 있다.-->
+            <div class="mb-2" :class="attrs.class" :style="attrs.style" @click="attrs.onClick">
                 Content
             </div>
             <hr/>
@@ -20,6 +16,7 @@
 import { defineOptions, useAttrs } from "vue";
 
 defineOptions ({
+    //FallThrough 비활성화
     inheritAttrs: false
 });
 
@@ -31,6 +28,7 @@ function handleBtn1() {
 }
 
 function handleBtn2() {
+    console.log('속성으로 전달된 핸들러 함수를 호출한다잇');
     attrs.onClick(); //속성으로 전달된 핸들러 함수(리스너)를 호출
 }
 </script>

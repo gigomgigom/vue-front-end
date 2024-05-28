@@ -7,9 +7,11 @@
             <button class="btn btn-info btn-sm" @click="showDialogC">로그인 Dialog</button>
         </div>
 
+        <!--id속성이 FallThrough되어서 DialogA에 흘러가고 DialogA에서도 FallThrough가 되어서 
+            최종적으로 DialogTemplate의 루트태그에 속성이 들어가게 된다.-->
         <DialogA id="dialogA"/>
         <DialogB id="dialogB" @close="hideDialogB"/>
-        <DialogC id="dialogC"/>
+        <DialogC id="dialogC" @close="hideDialogC"/>
     </div>
 </template>
 
@@ -41,6 +43,14 @@
     }
     function showDialogC() {
         modalDialogC.show();
+    }
+
+    function hideDialogB() {
+        modalDialogB.hide();
+    }
+
+    function hideDialogC() {
+        modalDialogC.hide();
     }
 </script>
 
