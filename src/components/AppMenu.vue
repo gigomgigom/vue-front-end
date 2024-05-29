@@ -173,6 +173,33 @@
                             <RouterLink to="/Ch05DataDelivery/Exam02EventEmits" class="nav-link">
                                 Exam02Emits: 하위->상위 event방식</RouterLink>
                         </li>
+                        <li class="nav-item">
+                            <RouterLink to="/Ch05DataDelivery/Exam03ProvideInject" class="nav-link">
+                                Exam03ProvideInject: 하위 컴포넌트 전체에 데이터 제공</RouterLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                    Ch06. LifeCycleHook - Vue 생명주기
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <RouterLink to="/Ch06LifeCycleHook/Exam01LifeCycleHook" class="nav-link">
+                                Exam01LifeCycleHook: 생명주기 Hook</RouterLink>
+                        </li>
+                        <li class="nav-item">
+                            <RouterLink to="/Ch06LifeCycleHook/Exam02DomElementRef" class="nav-link">
+                                Exam02DomElementRef: DOM 요소 참조</RouterLink>
+                        </li>
                     </ul>
                 </div>
             </div>
