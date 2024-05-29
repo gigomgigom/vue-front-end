@@ -30,7 +30,7 @@
             :propB="5"
             propC="뷰"
             propD="프론트엔드"
-            :propI="5"
+            :propI="-1"
 
         />
         <button class="btn btn-info btn-sm mt-2" @click="changeData">상태 변경</button>

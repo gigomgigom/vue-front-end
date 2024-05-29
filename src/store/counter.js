@@ -1,4 +1,3 @@
-import { createStore } from 'vuex'
 //Store 객체를 생성
 export default {
     namespaced: true,
