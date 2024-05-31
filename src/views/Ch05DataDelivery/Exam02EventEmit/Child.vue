@@ -18,6 +18,7 @@
 <script setup>
 import { ref } from 'vue';
 
+    //자식이 부모에게 전달할 상태 데이터를 정의
     let data1 = ref("value1");
     let data2 = ref("value2");
 
