@@ -6,6 +6,7 @@ import Ch04EventHandlingWatch from "./Ch04EventHandlingWatch";
 import Ch05DataDelivery from "./Ch05DataDelivery";
 import Ch06LifeCycleHook from "./Ch06LifeCycleHook";
 import Ch07VuexStateManagement from "./Ch07VuexStateManagement";
+import Ch08RestAPI from "./Ch08RestAPI";
 
 const routes = [
   {
@@ -18,7 +19,8 @@ const routes = [
   ...Ch04EventHandlingWatch,
   ...Ch05DataDelivery,
   ...Ch06LifeCycleHook,
-  ...Ch07VuexStateManagement
+  ...Ch07VuexStateManagement,
+  ...Ch08RestAPI
 ]
 
 const router = createRouter({

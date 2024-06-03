@@ -24,11 +24,13 @@
 
     //Store객체 내부 state 또는 getter속성 사용하는 일반 함수
     function getUserId() {
+        console.log("일반함수 호출");
         return store.state.userId;
         //return store.state.getUserId;
     }
     //Store객체 내부 state 또는 getter속성 사용하는 Computed 함수
     const computedUserId = computed(() => {
+        console.log("Computed함수 호출");
         return store.state.userId;
         //return store.state.getUserId;
     });

@@ -227,6 +227,25 @@
                 </div>
             </div>
         </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                    Ch08. RestAPI
+                </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <RouterLink to="/Ch08RestAPI/Exam01Promise" class="nav-link">
+                                Exam01Promise: Promise 비동기 처리</RouterLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
