@@ -17,7 +17,7 @@
             <tbody>
                 <tr v-for="board in page.boards" :key="board.bno">
                     <td class="text-center">{{ board.bno }}</td>
-                    <td><RouterLink to="/">{{ board.btitle }}</RouterLink></td>
+                    <td><RouterLink :to="`/Ch08RestAPI/Exam04Board/BoardRead?bno=${board.bno}&pageNo=${pageNo}`">{{ board.btitle }}</RouterLink></td>
                     <td class="text-center">{{ board.bwriter }}</td>
                     <td class="text-center">{{ new Date(board.bdate).toLocaleDateString() }}</td>
                     <td class="text-center">{{ board.bhitcount }}</td>
@@ -32,7 +32,7 @@
                         @click="changePageNo(pageNo)">
                             {{ pageNo }}
                         </button>
-                        <button v-if="page.pager.groupNo<page.pager.totalGroupNo" class="btn btn-outline-primary btn-sm me-1" @click="changePage(page.pager.endPageNo+1)">다음</button>
+                        <button v-if="page.pager.groupNo<page.pager.totalGroupNo" class="btn btn-outline-primary btn-sm me-1" @click="changePageNo(page.pager.endPageNo+1)">다음</button>
                         <button class="btn btn-outline-primary btn-sm me-1" @click="changePageNo(page.pager.totalPageNo)">맨끝</button>
                     </td>
                 </tr>
@@ -56,7 +56,8 @@ let page = ref({
 //GET 방식으로 전달된 파라미터값얻기
 //http://localhost:8080/Exam04Board/BoardList?pageNo=(?????)
 const route = useRoute();
-const pageNo = route.query.pageNo || 1;
+const pageNo = ref(route.query.pageNo || 1);
+
 
 //게시물 목록을 가져오는 메소드 정의
 async function getBoardList(pageNo) {
@@ -70,7 +71,7 @@ async function getBoardList(pageNo) {
 }
 
 //게시물 목록 가져오기
-getBoardList(pageNo);
+getBoardList(pageNo.value);
 
 //페이지의 버튼을 클릭했을 때 해당 페이지로 이동하는 함수 정의
 const router = useRouter();
@@ -86,9 +87,12 @@ watch(route, (newRoute, oldRoute) => {
     if(newRoute.query.pageNo) {
         //새로운 pageNo에 해당하는 BoardList를 받아온다.
         getBoardList(newRoute.query.pageNo);
+        //pageNo 상태의 값을 변경한다.
+        pageNo.value = newRoute.query.pageNo;
     } else {
         //URL 이동시 pageNo param이 넘어오지 않았다면 pageNo가 1인 boardList를 가져와라
         getBoardList(1);
+        pageNo.value = 1;
     }
 });
 </script>

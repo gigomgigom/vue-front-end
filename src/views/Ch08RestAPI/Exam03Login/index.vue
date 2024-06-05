@@ -48,6 +48,7 @@ async function handleSubmit() {
         const response = await memberAPI.login(data);
         //만약 받은 응답이 결과가 
         if (response.data.result === "success") {
+            //action호출에 필요한 payload를 추가해준다.
             const payload = {
                 userId: response.data.mid,
                 accessToken: response.data.accessToken
